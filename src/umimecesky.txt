@@ -1,0 +1,17 @@
+Pravopis
+	diktáty (doplň y/i) = 3
+	Doplňovačka (vyber ze 2 slov) = 26
+	Vpisování (doplň slovo) = 22 (nemám)
+Mluvnice
+	čárky (doplň čárku nebo nic) = 4 
+	Krok po kroku (jsou otázky a ty vybereš ze 2 odpovědí) = 41
+	otázky (máš na vyběr z otázek a vybereš správnou) = 19
+	rozbory = 5
+	rozřazovačka (spojuj karty) = 11
+Práce s textem
+	Hádanky = 44
+	Pexeso = 23
+	Přesouvání = 62
+	Slova ve větách = 60
+Ostatní
+	Křížovky = 55
