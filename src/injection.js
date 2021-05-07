@@ -68,12 +68,26 @@ function insertOnTop(node) {
 	document.getElementById('content').prepend(node);
 }
 
+
+
 //insertOnTop(shieldGottenText);
 //insertOnTop(shieldButtsDiv);
 insertAfter(exerciseDiv, shieldButtsDiv);
 insertAfter(shieldButtsDiv, shieldGottenText);
 shieldButtsDiv.scrollIntoView({ block: 'end',  behavior: 'smooth' });
-document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => {
+	event.preventDefault();
+	return false;
+});
+
+['keydown', 'keyup'].forEach(() => {
+	document.addEventListener("keydown", e => {
+  		if (e.key == "Shift" || e.key == "Control" || e.key == "Ctrl" || e.keyCode == 16 || e.keyCode == 17 || e.keyCode == 123) {
+    		e.preventDefault;
+    		return false;
+  		}
+	});
+})
 
 // Override the default hoverGap, because it interferes with our hack, so fuck it.
 function hoverGap(el){}
