@@ -1,23 +1,16 @@
 {
-   "background": {
-      "persistent": false,
-      "scripts": [ "src/initialize.js" ]
-   },
-   "browser_action": {
-      "default_icon": "64.png",
-      "default_title": "Klikni pro zapnutí :)"
-   },
-   "content_scripts": [ {
-      "js": [ "src/content-script.js" ],
-      "matches": [ "*://*.umimecesky.cz/*", "*://*.umimenemecky.cz/*", "*://*.umimematiku.cz/*", "*://*.umimefakta.cz/*", "*://*.umimeprogramovat.cz/*" ]
-   } ],
-   "description": "Proklikej se jednoduše úkolama na umimecesky.cz!",
-   "icons": {
-      "64": "64.png"
-   },
    "manifest_version": 2,
+
    "name": "Umím to",
-   "permissions": [ "*://*.umimecesky.cz/*", "*://*.umimenemecky.cz/*", "*://*.umimematiku.cz/*", "*://*.umimefakta.cz/*", "*://*.umimeprogramovat.cz/*" ],
-   "version": "1.0.0",
-   "web_accessible_resources": [ "src/injection.js" ]
+   "description": "Proklikej se jednoduše úkolama na umimecesky.cz!",
+   "version": "1.0.1",
+   "icons": {"64": "64.png"},
+
+   "content_scripts": [{
+      "matches": ["*://*.umimecesky.cz/*", "*://*.umimenemecky.cz/*", "*://*.umimematiku.cz/*", "*://*.umimefakta.cz/*", "*://*.umimeprogramovat.cz/*"],
+      "js": ["src/content-script.js"],
+      "run_at": "document_end"
+   }],
+   "permissions": ["tabs", "*://*.umimecesky.cz/*", "*://*.umimenemecky.cz/*", "*://*.umimematiku.cz/*", "*://*.umimefakta.cz/*", "*://*.umimeprogramovat.cz/*"],
+   "web_accessible_resources": ["src/injection.js"]
 }
